@@ -33,6 +33,7 @@ export default {
     },
     created () {
         this.h = this.height + 'rem'
+        this.arr = this.dataList
     }
 }
 </script>

@@ -1,6 +1,8 @@
 <template>
     <div id="Header" class="header-box">
-        <div class="back" @click="back"></div>{{title}}
+        <div class="header-icon mintui mintui-back" v-if="$store.state.menu" @click="back"></div>
+        <div class="header-title">{{title}}</div>
+        <i class="header-icon icon-city"></i>
     </div>
 </template>
 
@@ -10,7 +12,7 @@ export default {
     name: 'Header',
     data () {
         return {
-            title: ''
+            title: '同城店铺'
         }
     },
     methods: {
@@ -28,26 +30,36 @@ export default {
 
 <style lang="scss">
 .header-box{
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
+    z-index: 9;
     text-align: center;
     height: .9rem;
     line-height: .9rem;
     font-size: .28rem;
-    color: #000;
-    border-bottom: .02rem solid #ccc;
-    box-shadow: 0 0 .1rem #ddd;
-    background-color: #fff;
-    .back{
+    color: #fff;
+    box-shadow: 0 0 .1rem #999;
+    background-color: #414141;
+    .header-title{
+        font-size: .32rem;
+    }
+    .header-icon{
         position: absolute;
-        left: 0;
         top: 0;
         width: .9rem;
         height: .9rem;
-        background: url('../../assets/images/left.png') no-repeat center;
-        background-size: auto .4rem;
+    }
+    .icon-menu{
+        left: 0;
+        background: url('../../assets/images/icon-menu.png') no-repeat center;
+        background-size: auto .46rem;
+    }
+    .icon-city{
+        right: 0;
+        background: url('../../assets/images/site_cur.png') no-repeat center;
+        background-size: auto .46rem;
     }
 }
 </style>

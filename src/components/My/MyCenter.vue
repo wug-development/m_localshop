@@ -11,12 +11,12 @@
         <ul class="my-action-list">
             <li><span>我的积分</span><span class="content">{{credit}} 积分</span></li>
             <li><router-link :to="{path:'/my/myaddress'}"><span>收货地址</span></router-link></li>
-            <li class="hide" @click="tolink('/my/myinfo')"><span>我的信息</span></li>
-            <li class="hide"><a href="/my/myconpon"><span>我的优惠券</span><span class="content">0 张可用</span></a></li>
+            <li @click="tolink('/my/myinfo')"><span>我的信息</span></li>
+            <li><a href="/my/myconpon"><span>我的优惠券</span><span class="content">0 张可用</span></a></li>
             <li><router-link :to="{path:'/my/myvip?p='+price}"><span>我的储值卡</span><span class="content">可用余额 &yen; {{price}}</span></router-link></li>
-            <li class="hide"><a href="/my/mydate"><span>我的纪念日</span><span></span></a></li>
-            <li class="hide"><a href="/my/myreturns"><span>退换货</span><span></span></a></li>
-            <li class="hide"><router-link :to="{path:'/my/mypass'}"><span>修改密码</span></router-link></li>
+            <li><a href="/my/mydate"><span>我的纪念日</span><span></span></a></li>
+            <li><a href="/my/myreturns"><span>退换货</span><span></span></a></li>
+            <li><router-link :to="{path:'/my/mypass'}"><span>修改密码</span></router-link></li>
         </ul>
         <div class="my-outlogin hide">
             退出登录

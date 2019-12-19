@@ -49,17 +49,67 @@ function headMenu (linkPath, imgpathlib) {
     const basePath = '/home/'
     return [
         {
-            names: '新品上新',
+            names: '生活用品',
             links: linkPath + '138',
             issel: false,
-            childmenu: {}
+            childmenu: {
+                imgs: 'https://img.alicdn.com/bao/uploaded/i1/TB1vPCPQFXXXXa.XXXXSutbFXXX.jpg_Q50s50.jpg_.webp',
+                links: linkPath + '4',
+                childmenu: [
+                    {
+                        names: '用途',
+                        childmenu: [
+                            {
+                                names: '床上用品',
+                                imgs: 'https://img.alicdn.com/imgextra/i1/92042735/O1CN01gtCPkn1W4foJvDmFG_!!92042735.jpg_430x430q90.jpg',
+                                links: linkPath + '/shengri.html'
+                            },
+                            {
+                                names: '居家布艺',
+                                imgs: 'https://img.alicdn.com/imgextra/i3/3685033751/TB2zLKbeAfb_uJkSmLyXXcxoXXa_!!3685033751.jpg_430x430q90.jpg',
+                                links: linkPath + '/jinianri.html'
+                            },
+                            {
+                                names: '家居饰品',
+                                imgs: 'https://img.alicdn.com/imgextra/i2/2270397378/O1CN01XCqHlV24NAhOc0Hmk_!!2270397378.jpg_430x430q90.jpg',
+                                links: linkPath + '/biaobai.html'
+                            }
+                        ]
+                    },
+                    {
+                        names: '厨房用品',
+                        childmenu: [
+                            {
+                                names: '厨具',
+                                imgs: 'https://img.alicdn.com/imgextra/i1/134438005/O1CN01tGBTUc290L3AO2bjr_!!134438005.jpg_430x430q90.jpg',
+                                links: linkPath + '/songnanyou.html'
+                            },
+                            {
+                                names: '烹饪锅具',
+                                imgs: 'https://img.alicdn.com/bao/uploaded/i2/2126765862/O1CN01WfzsnN1tAqJa1AzoX_!!0-item_pic.jpg',
+                                links: linkPath + '/songnvyou.html'
+                            },
+                            {
+                                names: '餐饮用具',
+                                imgs: 'https://img.alicdn.com/bao/uploaded/i1/3328502737/O1CN01eBs8sO1W5abp7cRQ4_!!3328502737-0-pixelsss.jpg',
+                                links: linkPath + '/songmuqin.html'
+                            },
+                            {
+                                names: '家务用品',
+                                imgs: 'https://img.alicdn.com/bao/uploaded/i1/3913464376/O1CN01CQnRD31iCFkqC7gvi_!!3913464376.jpg',
+                                links: linkPath + '/songfuqin.html'
+                            }
+                        ]
+                    }
+                ]
+            }
         },
         {
-            names: '爱礼推荐',
+            names: '汽车/配件',
             links: 'javascript:void(0);',
             issel: true,
             childmenu: {
-                imgs: imgpathlib + '15529893631162586.jpg',
+                imgs: 'https://img.alicdn.com/bao/uploaded/i1/TB1vPCPQFXXXXa.XXXXSutbFXXX.jpg_Q50s50.jpg_.webp',
                 links: linkPath + '4',
                 childmenu: [
                     {
@@ -116,7 +166,7 @@ function headMenu (linkPath, imgpathlib) {
             }
         },
         {
-            names: '鲜花玫瑰',
+            names: '生鲜水果',
             links: 'javascript:void(0);',
             issel: false,
             childmenu: {
@@ -182,7 +232,7 @@ function headMenu (linkPath, imgpathlib) {
             }
         },
         {
-            names: '永生玫瑰',
+            names: '零食烟酒',
             links: 'javascript:void(0);',
             issel: false,
             childmenu: {
@@ -263,7 +313,7 @@ function headMenu (linkPath, imgpathlib) {
             }
         },
         {
-            names: '玫瑰珠宝',
+            names: '服装/商场',
             links: 'javascript:void(0);',
             issel: false,
             childmenu: {
@@ -334,7 +384,7 @@ function headMenu (linkPath, imgpathlib) {
             }
         },
         {
-            names: '玫瑰饰品',
+            names: '医药/保健',
             links: 'javascript:void(0);',
             issel: false,
             childmenu: {
@@ -395,7 +445,7 @@ function headMenu (linkPath, imgpathlib) {
             }
         },
         {
-            names: '玫瑰香氛',
+            names: '电子产品',
             links: 'javascript:void(0);',
             issel: false,
             childmenu: {
@@ -446,26 +496,8 @@ function headMenu (linkPath, imgpathlib) {
             }
         },
         {
-            names: '高端定制',
+            names: '家具/建材',
             links: basePath + '/list/gddz.html',
-            issel: false,
-            childmenu: {}
-        },
-        {
-            names: '专卖店',
-            links: basePath + '/about/shitidian.html',
-            issel: false,
-            childmenu: {}
-        },
-        {
-            names: '婚礼定制',
-            links: basePath + '/m/phone/wedding.html',
-            issel: false,
-            childmenu: {}
-        },
-        {
-            names: '诺誓世界',
-            links: basePath + '/nuoshi/nuoshishijie.html',
             issel: false,
             childmenu: {}
         }]
@@ -548,7 +580,8 @@ function headMenu (linkPath, imgpathlib) {
                         margin-bottom: .2rem;
                         img{
                             display: block;
-                            width: 100%;
+                            width: 80%;
+                            margin: 0 auto;
                         }
                     }
                 }

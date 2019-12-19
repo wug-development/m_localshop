@@ -1,7 +1,8 @@
 <template>
     <div id="Footer" class="footerbox" v-if="isShowFooter">
         <ul class="footerbox-menu-box" @click="toppage">
-            <li id="home/list?id=0" :class='$store.state.menuCur==2?"menu-cur":"menu"'>列表</li>
+            <li id="home" :class='$store.state.menuCur==1?"home-cur":"home"'>首页</li>
+            <li id="menu" :class='$store.state.menuCur==2?"menu-cur":"menu"'>分类</li>
             <li id="cart" :class='$store.state.menuCur==3?"cart-cur":"cart"'>购物车</li>
             <li id="my" :class='$store.state.menuCur==4?"my-cur":"my"'>我的</li>
         </ul>

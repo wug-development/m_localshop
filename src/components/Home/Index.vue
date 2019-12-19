@@ -1,6 +1,6 @@
 <template>
     <div id="indexbox" class="index-box">
-        <SBanner :dataList="bannerList"  :height='5.4'></SBanner>
+        <SBanner :dataList="bannerList" :height='5.2'></SBanner>
         <div>
             <img :src='imgpathlib + "15554844407956239.jpg"' alt="">
         </div>
@@ -24,7 +24,7 @@ export default {
     data () {
         return {
             userid: 0,
-            bannerList: []
+            bannerList: ['https://www.roseonly.com.cn/upload/syspic_new/15521259916726969.jpg', 'https://www.roseonly.com.cn/upload/syspic_new/15521259916726969.jpg']
         }
     },
     components: {
@@ -44,6 +44,7 @@ export default {
     },
     beforeMount () {
         this.$store.state.menu = true
+        this.$store.state.menuCur = 1
         this.$http.get(this.apio + '/index/m/0', {})
         .then(res => {
             this.bannerList = res.data.datas
